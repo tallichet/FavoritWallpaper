@@ -13,7 +13,7 @@ namespace Lib
 {
     public class LockscreenUpdater
     {
-        private static async void LockHelper(string filePathOfTheImage, bool isAppResource)
+        private static async void LockHelper(string imageName, bool isAppResource)
         {
             try
             {
@@ -35,8 +35,7 @@ namespace Lib
                     // The following code example shows the new URI schema.
                     // ms-appdata points to the root of the local app data folder.
                     // ms-appx points to the Local app install folder, to reference resources bundled in the XAP package.
-                    var schema = isAppResource ? "ms-appx:///" : "ms-appdata:///Local/";
-                    var uri = new Uri(schema + filePathOfTheImage, UriKind.Absolute);
+                    var uri = new Uri("ms-appdata:///Local/images/" + imageName, UriKind.Absolute);
 
                     // Set the lock screen background image.
                     Windows.Phone.System.UserProfile.LockScreen.SetImageUri(uri);

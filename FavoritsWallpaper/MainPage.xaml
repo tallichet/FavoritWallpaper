@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="Wheat">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -47,7 +47,25 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Click="GoToLockSettings_Click"> Go to lock sceen settings</Button>
+            <ListBox ItemsSource="{Binding LocalImages}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Height="80">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Width="80" Height="80" Source="{Binding Image}" Stretch="UniformToFill" />
+                            
+                            <TextBlock Text="{Binding Name}" Grid.Column="1"
+                                       TextWrapping="Wrap" />
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+            <!--<Button Click="GoToLockSettings_Click"> Go to lock sceen settings</Button>-->
         </Grid>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are
