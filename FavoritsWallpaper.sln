@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FavoritsWallpaper", "FavoritsWallpaper\FavoritsWallpaper.csproj", "{F735779D-D85D-44C6-9889-1CFF23E373DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib", "Lib\Lib.csproj", "{AAE15190-4744-49B9-9D6C-FE6ABF237EAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Debug|ARM.ActiveCfg = Debug|ARM
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Debug|ARM.Build.0 = Debug|ARM
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Debug|ARM.Deploy.0 = Debug|ARM
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Debug|x86.ActiveCfg = Debug|x86
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Debug|x86.Build.0 = Debug|x86
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Debug|x86.Deploy.0 = Debug|x86
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Release|ARM.ActiveCfg = Release|ARM
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Release|ARM.Build.0 = Release|ARM
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Release|ARM.Deploy.0 = Release|ARM
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Release|x86.ActiveCfg = Release|x86
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Release|x86.Build.0 = Release|x86
+		{F735779D-D85D-44C6-9889-1CFF23E373DA}.Release|x86.Deploy.0 = Release|x86
+		{AAE15190-4744-49B9-9D6C-FE6ABF237EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE15190-4744-49B9-9D6C-FE6ABF237EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE15190-4744-49B9-9D6C-FE6ABF237EAD}.Debug|ARM.ActiveCfg = Debug|ARM
+		{AAE15190-4744-49B9-9D6C-FE6ABF237EAD}.Debug|ARM.Build.0 = Debug|ARM
+		{AAE15190-4744-49B9-9D6C-FE6ABF237EAD}.Debug|x86.ActiveCfg = Debug|x86
+		{AAE15190-4744-49B9-9D6C-FE6ABF237EAD}.Debug|x86.Build.0 = Debug|x86
+		{AAE15190-4744-49B9-9D6C-FE6ABF237EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE15190-4744-49B9-9D6C-FE6ABF237EAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAE15190-4744-49B9-9D6C-FE6ABF237EAD}.Release|ARM.ActiveCfg = Release|ARM
+		{AAE15190-4744-49B9-9D6C-FE6ABF237EAD}.Release|ARM.Build.0 = Release|ARM
+		{AAE15190-4744-49B9-9D6C-FE6ABF237EAD}.Release|x86.ActiveCfg = Release|x86
+		{AAE15190-4744-49B9-9D6C-FE6ABF237EAD}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
