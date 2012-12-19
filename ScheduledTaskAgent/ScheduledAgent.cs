@@ -49,10 +49,30 @@ namespace WallpaperAgent
                 var currentFileName = System.IO.Path.GetFileName(uri.AbsolutePath);
 
                 var pictures = (await Lib.WallpaperManager.QueryLocalPictures()).ToList();
-                var currentPictureFile = pictures.FirstOrDefault(p => p.Name == currentFileName);
-                if (currentPictureFile != null) 
+
+                if (pictures.Count == 0)
                 {
-                    var indexOfCurrent = pictures.IndexOf(currentPictureFile);
+                    Lib.LockscreenUpdater.SetLockScreenImage("DefaultLockScreen.jpg", true);
+                }
+                else
+                {
+                    var currentPictureFile = pictures.FirstOrDefault(p => p.Name == currentFileName);
+                    if (currentPictureFile != null)
+                    {
+                        var indexOfCurrent = pictures.IndexOf(currentPictureFile);
+                        if (indexOfCurrent < pictures.Count - 1)
+                        {
+                            Lib.LockscreenUpdater.SetLockScreenImage(pictures[indexOfCurrent + 1].Name, false);
+                        }
+                        else
+                        {
+                            Lib.LockscreenUpdater.SetLockScreenImage(pictures.First().Name, false);
+                        }
+                    }
+                    else
+                    {
+                        Lib.LockscreenUpdater.SetLockScreenImage(pictures.First().Name, false);
+                    }
                 }
                 
             

@@ -66,7 +66,7 @@ namespace Lib
         private async void updateLocalImages()
         {
             querying = true;
-            localImages = from file in await queryLocalPictures()
+            localImages = from file in await QueryLocalPictures()
                           select new LocalImageFileInfo(file);
             querying = false;
 
