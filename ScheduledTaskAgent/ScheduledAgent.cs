@@ -3,6 +3,7 @@ using System.Windows;
 using Microsoft.Phone.Scheduler;
 using Microsoft.Phone.Shell;
 using System;
+using System.Linq;
 
 namespace WallpaperAgent
 {
@@ -39,10 +40,21 @@ namespace WallpaperAgent
         /// <remarks>
         /// This method is called when a periodic or resource intensive task is invoked
         /// </remarks>
-        protected override void OnInvoke(ScheduledTask task)
+        protected async override void OnInvoke(ScheduledTask task)
         {
-            
+            var isProvider = Windows.Phone.System.UserProfile.LockScreenManager.IsProvidedByCurrentApplication;
+            if (isProvider)
+            {
+                var uri = Lib.LockscreenUpdater.GetLockScreenImageUri();
+                var currentFileName = System.IO.Path.GetFileName(uri.AbsolutePath);
 
+                var pictures = (await Lib.WallpaperManager.QueryLocalPictures()).ToList();
+                var currentPictureFile = pictures.FirstOrDefault(p => p.Name == currentFileName);
+                if (currentPictureFile != null) 
+                {
+                    var indexOfCurrent = pictures.IndexOf(currentPictureFile);
+                }
+                
             
             // Launch a toast to show that the agent is running.
             // The toast will not be shown if the foreground application is running.
@@ -56,6 +68,7 @@ namespace WallpaperAgent
             ScheduledActionService.LaunchForTest(task.Name, TimeSpan.FromSeconds(60));
 #endif
 
+            }
 
             NotifyComplete();
         }

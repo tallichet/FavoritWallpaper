@@ -13,7 +13,17 @@ namespace Lib
 {
     public class LockscreenUpdater
     {
-        private static async void LockHelper(string imageName, bool isAppResource)
+        public static Uri GetLockScreenImageUri()
+        {
+            var isProvider = Windows.Phone.System.UserProfile.LockScreenManager.IsProvidedByCurrentApplication;
+            if (isProvider)
+            {
+                return Windows.Phone.System.UserProfile.LockScreen.GetImageUri();
+            }
+            return null;
+        }
+
+        public static async void SetLockScreenImage(string imageName, bool isAppResource)
         {
             try
             {

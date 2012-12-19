@@ -73,14 +73,14 @@ namespace Lib
             PropertyChanged.Raise(this, () => this.LocalImages);
         }
 
-        private async Task<IReadOnlyList<Windows.Storage.StorageFile>> queryLocalPictures()
+        public static async Task<IReadOnlyList<Windows.Storage.StorageFile>> QueryLocalPictures()
         {
             var folder = await getImagesFolder();
 
             return await folder.GetFilesAsync();
         }
 
-        private IAsyncOperation<Windows.Storage.StorageFolder> getImagesFolder()
+        private static IAsyncOperation<Windows.Storage.StorageFolder> getImagesFolder()
         {
             return Windows.Storage.ApplicationData.Current.LocalFolder.CreateFolderAsync("images", Windows.Storage.CreationCollisionOption.OpenIfExists);
         }
